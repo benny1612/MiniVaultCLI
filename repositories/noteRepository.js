@@ -1,4 +1,4 @@
-import { notes } from "../data/notes"
+import { notes } from "../data/notes.js"
 
 class Note {
     constructor(id, ownerUsername, text) {
