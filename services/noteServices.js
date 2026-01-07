@@ -1,5 +1,5 @@
 import input from "analiza-sync";
-import { deleteById, listByOwner, Note } from "../repositories/noteRepository";
+import { deleteById, listByOwner, Note } from "../repositories/noteRepository.js";
 import { exists } from "../repositories/userRepository.js";
 
 

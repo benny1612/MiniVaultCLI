@@ -1,7 +1,8 @@
 import { users } from "../data/users.js";
-class User {
-  constructor(id, username, password) {
-    this.id = id;
+export class User {
+  static count = 1
+  constructor(username, password) {
+    this.id = User.count ++;
     this.username = username;
     this.password = password;
     this.createdAt = new Date();
@@ -22,18 +23,10 @@ export function findByUsername(username) {
 
 export function exists(username) {
   const index = users.findIndex((user) => user.username === username);
-  if (index == -1) {
-    return true;
-  }
-  return false;
-}
-
-export function validatesinput(id, password) {
-  const checkId = typeof id === "string";
-  const checkPassword = typeof password === "string";
-  if (checkId && checkPassword) {
-    return true;
-  } else {
+  if (index === -1) {
     return false;
   }
+  return true;
 }
+
+
