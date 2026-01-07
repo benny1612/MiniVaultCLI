@@ -1,0 +1,24 @@
+{
+  "name": "minivaultcli",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000M\u0000i\u0000n\u0000i\u0000V\u0000a\u0000u\u0000l\u0000t\u0000C\u0000L\u0000I\u0000\r\u0000 \u0000",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benny1612/MiniVaultCLI.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/benny1612/MiniVaultCLI/issues"
+  },
+  "homepage": "https://github.com/benny1612/MiniVaultCLI#readme",
+  "dependencies": {
+    "analiza-sync": "^1.0.1"
+  }
+}
