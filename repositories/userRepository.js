@@ -10,9 +10,7 @@ class User {
     users.push(this);
   }
 }
-const u = new User(1, "benny", 1234);
-u.add();
-console.log(users);
+
 
 export function findByUsername(username) {
   const index = users.findIndex((user) => user.username === username);
