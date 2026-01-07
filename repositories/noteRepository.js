@@ -1,8 +1,9 @@
 import { notes } from "../data/notes.js"
 
 class Note {
-    constructor(id, ownerUsername, text) {
-        this.id = id,
+    static count = 1
+    constructor(ownerUsername, text) {
+        this.id = Note.count ++,
         this.ownerUsername = ownerUsername,
         this.text = text,
         this.createdAt = new Date()
@@ -18,9 +19,9 @@ function listByOwner(username) {
 }
 
 function deleteById(ownerUsername, noteId) {
-    const note = notes.find((note) => note.ownerUsername === ownerUsername && note.id === noteId)
-    if (note) {
-        return {deleted: (notes.splice(notes.indexOf(note), 1))[0]}
+    const noteIndex = notes.findIndex((note) => note.ownerUsername === ownerUsername && note.id === noteId)
+    if (noteIndex !== -1) {
+        return {deleted: (notes.splice(noteIndex, 1))[0]}
     }
     else return "note is not defind"
 }

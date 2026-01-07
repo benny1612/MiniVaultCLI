@@ -1,4 +1,5 @@
 import input from "analiza-sync"
+import { userDetailsUi } from "./CLIdetails"
 
 function basicMenu() {
     const showMenu = input(`
@@ -53,7 +54,8 @@ export function TheMenu() {
         const menu = basicMenu()
         switch (menu) {
             case "1":
-
+                const details = userDetailsUi()
+                
                 break
             case "2":
                 console.log();
