@@ -27,7 +27,7 @@ function deleteById(ownerUsername, noteId) {
     if (note) {
         return {deleted: (notes.splice(notes.indexOf(note), 1))[0]}
     }
-    else "note is not defind"
+    else return "note is not defind"
 }
 
 
