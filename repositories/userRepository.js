@@ -1,16 +1,27 @@
 import { users } from "../data/users.js";
+import { Note } from "./noteRepository.js";
 class User {
   static count = 1;
   constructor(username, password) {
     this.id = User.count++;
     this.username = username;
     this.password = password;
+    this.notes = [];
     this.createdAt = new Date();
+    this.genarateTwoNotes();
   }
   add() {
     users.push(this);
   }
+  genarateTwoNotes() {
+    const n1 = new Note(this.username,"exmpale")
+    const n2 = new Note(this.username,"exmpale")
+
+    this.notes.push(n1,n2);
+    
+  }
 }
+
 
 export function findByUsername(username) {
   const index = users.findIndex((user) => user.username === username);
