@@ -13,13 +13,8 @@ class Note {
 }
 
 function listByOwner(username) {
-    const owners = []
-    notes.forEach(note => {
-        if (!owners.find((owner) => owner.username === note.ownerUsername)) {
-            owners.push({username: note.ownerUsername})
-        }
-    });
-    return owners
+    const notes = notes.filter((note) => username === note.ownerUsername)
+    return notes
 }
 
 function deleteById(ownerUsername, noteId) {
