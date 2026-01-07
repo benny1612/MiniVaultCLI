@@ -6,6 +6,11 @@ function noteDetailsUi() {
     return {ownerUsername, text}
 }
 
+function idInput() {
+    const id = input(`id of note to delete: `)
+    return id
+}
+
 function userDetailsUi() {
     const username = input(`your name: `)
     const password = input(`password: `)
@@ -14,5 +19,6 @@ function userDetailsUi() {
 
 export {
     noteDetailsUi,
-    userDetailsUi
+    userDetailsUi,
+    idInput
 }

@@ -33,6 +33,8 @@ export function findByUsername(username) {
 
 export function exists(username) {
   const index = users.findIndex((user) => user.username === username);
+
+
   if (index == -1) {
     return true;
   }
@@ -66,3 +68,5 @@ export function validatesinput(username, password) {
   }
   return true;
 }
+
+
