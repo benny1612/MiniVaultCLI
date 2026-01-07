@@ -13,9 +13,26 @@ class Note {
 }
 
 function listByOwner(username) {
-    
+    const owners = []
+    notes.forEach(note => {
+        if (!owners.find((owner) => owner.username === note.ownerUsername)) {
+            owners.push({username: note.ownerUsername})
+        }
+    });
+    return owners
 }
 
 function deleteById(ownerUsername, noteId) {
+    const note = notes.find((note) => note.ownerUsername === ownerUsername && note.id === noteId)
+    if (note) {
+        return {deleted: (notes.splice(notes.indexOf(note), 1))[0]}
+    }
+    else "note is not defind"
+}
 
+
+export {
+    Note,
+    listByOwner,
+    deleteById
 }
